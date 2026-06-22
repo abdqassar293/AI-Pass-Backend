@@ -1,0 +1,12 @@
+package com.HOPn.AI_Pass.repository;
+
+import com.HOPn.AI_Pass.model.Task;
+import com.HOPn.AI_Pass.model.UserEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
+import java.util.Optional;
+
+public interface TaskRepository extends JpaRepository<Task, Long> {
+    List<Task> findByUserOrderByCreatedAtDesc(UserEntity user);
+    Optional<Task> findByIdAndUser(Long id, UserEntity user);
+}

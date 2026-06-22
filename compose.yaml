@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: aipass-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: aipass
+      POSTGRES_USER: aipass
+      POSTGRES_PASSWORD: aipass
+    ports:
+      - "5432:5432"
+    volumes:
+      - aipass-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U aipass -d aipass"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  aipass-postgres-data:
