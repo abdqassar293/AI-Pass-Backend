@@ -4,9 +4,9 @@ A Spring Boot backend that demonstrates a simplified AI orchestration platform: 
 
 ## Live Demo
 
-- **Live API:** `URL`)
-- **Swagger UI:** `/swagger-ui.html`
-- **Health:** `/health`
+- **Live API:** `https://ai-pass-backend-7zli.onrender.com/`
+- **Swagger UI:** `https://ai-pass-backend-7zli.onrender.com/swagger-ui.html`
+- **Health:** `https://ai-pass-backend-7zli.onrender.com/health`
 - **GitHub:** `https://github.com/abdqassar293/AI-Pass-Backend`
 
 ## Tech Stack
@@ -132,12 +132,12 @@ Every task returns the spec-required shape:
 Interactive Swagger UI is available at:
 
 ```
-<YOUR_LIVE_URL>/swagger-ui.html
+/swagger-ui.html
 ```
 
 Click **Authorize** in the top-right, paste a JWT (without `Bearer`), and all protected endpoints become testable from the browser.
 
-OpenAPI JSON spec: `<YOUR_LIVE_URL>/v3/api-docs`
+OpenAPI JSON spec: `/v3/api-docs`
 
 ## AI Integration Approach
 
@@ -183,7 +183,6 @@ The internal logic of the **execution engine handlers** (`DocumentSummaryHandler
 | `SPRING_DATASOURCE_USERNAME` | `aipass`                       | DB user                  |
 | `SPRING_DATASOURCE_PASSWORD` | `aipass`                       | DB password              |
 
-In production, **override `JWT_SECRET`** with a strong random value.
 
 ## Deployment
 
@@ -194,8 +193,8 @@ Deployed to **Render** with a managed PostgreSQL instance.
 1. Push the repo to GitHub.
 2. On Render: **New → PostgreSQL** → copy the internal connection string.
 3. **New → Web Service** → connect the GitHub repo.
-   - **Build command:** `./mvnw clean package -DskipTests`
-   - **Start command:** `java -jar target/*.jar`
+   - **Build command (Included in Docker file):** `./mvnw clean package -DskipTests`
+   - **Start command (Included in Docker file):** `java -jar target/*.jar`
    - **Environment variables:**
      - `SPRING_DATASOURCE_URL` = ``
      - `SPRING_DATASOURCE_USERNAME` = ``
