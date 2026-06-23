@@ -4,9 +4,9 @@ A Spring Boot backend that demonstrates a simplified AI orchestration platform: 
 
 ## Live Demo
 
-- **Live API:** `URL`)
-- **Swagger UI:** `/swagger-ui.html`
-- **Health:** `/health`
+- **Live API:** `https://ai-pass-backend-7zli.onrender.com/`
+- **Swagger UI:** `https://ai-pass-backend-7zli.onrender.com/swagger-ui.html`
+- **Health:** `https://ai-pass-backend-7zli.onrender.com/health`
 - **GitHub:** `https://github.com/abdqassar293/AI-Pass-Backend`
 
 ## Tech Stack
