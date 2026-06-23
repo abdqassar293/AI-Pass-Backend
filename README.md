@@ -132,12 +132,12 @@ Every task returns the spec-required shape:
 Interactive Swagger UI is available at:
 
 ```
-<YOUR_LIVE_URL>/swagger-ui.html
+/swagger-ui.html
 ```
 
 Click **Authorize** in the top-right, paste a JWT (without `Bearer`), and all protected endpoints become testable from the browser.
 
-OpenAPI JSON spec: `<YOUR_LIVE_URL>/v3/api-docs`
+OpenAPI JSON spec: `/v3/api-docs`
 
 ## AI Integration Approach
 
@@ -183,7 +183,6 @@ The internal logic of the **execution engine handlers** (`DocumentSummaryHandler
 | `SPRING_DATASOURCE_USERNAME` | `aipass`                       | DB user                  |
 | `SPRING_DATASOURCE_PASSWORD` | `aipass`                       | DB password              |
 
-In production, **override `JWT_SECRET`** with a strong random value.
 
 ## Deployment
 
