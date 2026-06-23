@@ -194,8 +194,8 @@ Deployed to **Render** with a managed PostgreSQL instance.
 1. Push the repo to GitHub.
 2. On Render: **New → PostgreSQL** → copy the internal connection string.
 3. **New → Web Service** → connect the GitHub repo.
-   - **Build command:** `./mvnw clean package -DskipTests`
-   - **Start command:** `java -jar target/*.jar`
+   - **Build command (Included in Docker file):** `./mvnw clean package -DskipTests`
+   - **Start command (Included in Docker file):** `java -jar target/*.jar`
    - **Environment variables:**
      - `SPRING_DATASOURCE_URL` = ``
      - `SPRING_DATASOURCE_USERNAME` = ``
